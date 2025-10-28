@@ -21,9 +21,11 @@ const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
   ],
   contact: {
-    email: "aswinraja98@gmail.com",
-    tel: "+91 6374511087",
-    social: {
+  email: "aswinraja98@gmail.com",
+  phone: "+91 6374511087",
+  location: "Dharmapuri, Tamilnadu, India",
+  locationLink: "https://www.google.com/maps/place/Dharmapuri,+Tamil+Nadu",
+  social: {
       GitHub: {
         name: "GitHub",
         url: "https://github.com/aswinraja98",

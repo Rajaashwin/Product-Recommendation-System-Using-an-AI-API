@@ -88,7 +88,7 @@ export function CertificationAccordion({ cert, idx }: { cert: any; idx: number }
         aria-expanded={open}
         aria-controls={`cert-panel-${idx}`}
       >
-        <span className="font-semibold text-base text-[#E5E7EB] flex-1 text-left truncate">{cert.title}</span>
+        <span className="font-semibold text-base text-slate-900 dark:text-[#E5E7EB] flex-1 text-left truncate">{cert.title}</span>
         <span className="text-xs text-[#06B6D4] font-semibold mx-4 w-14 text-right">{cert.year}</span>
         <span className="px-3 py-1 border border-[#06B6D4] text-[#06B6D4] rounded-lg text-xs font-semibold bg-transparent mx-2">Certificate</span>
         <span className="ml-2">{open ? <ChevronUp className="w-5 h-5 text-[#06B6D4]" /> : <ChevronDown className="w-5 h-5 text-[#06B6D4]" />}</span>
@@ -98,8 +98,8 @@ export function CertificationAccordion({ cert, idx }: { cert: any; idx: number }
           id={`cert-panel-${idx}`}
           className="rounded-b-lg bg-transparent border-x border-b border-[#06B6D4] shadow-md px-6 pt-2 pb-6"
         >
-          <div className="text-xs text-slate-400 mb-2">{cert.institution}</div>
-          <div className="text-lg font-bold text-slate-100 mb-2 mt-2">Skills Gained:</div>
+          <div className="text-xs text-slate-700 dark:text-slate-300 mb-2">{cert.institution}</div>
+          <div className="text-lg font-bold text-slate-900 dark:text-[#E5E7EB] mb-2 mt-2">Skills Gained:</div>
           <div className="flex flex-wrap gap-3 mb-6">
             {(CERT_SKILLS[cert.title] || []).map((skill) => (
               <span key={skill} className="px-3 py-1 border border-[#06B6D4] text-[#06B6D4] rounded-lg text-sm font-semibold bg-transparent">

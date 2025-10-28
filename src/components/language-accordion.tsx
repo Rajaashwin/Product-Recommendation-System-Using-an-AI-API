@@ -29,9 +29,9 @@ export function LanguageAccordion({ lang, idx }: { lang: any; idx: number }) {
       >
         <div className="flex items-center gap-3">
           {icon}
-          <span className="font-semibold text-base text-[#E5E7EB]">{lang.name}</span>
+          <span className="font-semibold text-base text-slate-900 dark:text-[#E5E7EB]">{lang.name}</span>
         </div>
-        <span className="ml-auto text-xs text-slate-400 font-semibold">{lang.level}</span>
+        <span className="ml-auto text-xs text-slate-700 dark:text-slate-300 font-semibold">{lang.level}</span>
         <span className="ml-4">{open ? <ChevronUp className="w-5 h-5 text-[#06B6D4]" /> : <ChevronDown className="w-5 h-5 text-[#06B6D4]" />}</span>
       </button>
       {open && (
@@ -50,7 +50,7 @@ export function LanguageAccordion({ lang, idx }: { lang: any; idx: number }) {
           <div className="text-base font-bold text-[#06B6D4] mb-2">
             About {lang.name}:
           </div>
-          <div className="text-base text-white mb-4">
+          <div className="text-base text-slate-900 dark:text-[#E5E7EB] mb-4">
             {lang.description}
           </div>
           {/* Learn More Link */}

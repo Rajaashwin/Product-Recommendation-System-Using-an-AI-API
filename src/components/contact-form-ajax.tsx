@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Icons } from "@/components/icons"; // Adjust import if needed
 
-export default function ContactFormAjax() {
+function ContactFormAjax() {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -9,58 +10,81 @@ export default function ContactFormAjax() {
     setLoading(true);
     setStatus("");
     const form = e.currentTarget;
-    const data = {
-      name: (form.elements.namedItem("name") as HTMLInputElement)?.value,
-      email: (form.elements.namedItem("email") as HTMLInputElement)?.value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement)?.value,
-    };
+    const data = new FormData(form);
     try {
       const res = await fetch("https://formspree.io/f/mjkpyozk", {
         method: "POST",
+        body: data,
         headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body: JSON.stringify(data),
       });
-      const result = await res.json();
-      if (result.ok) {
-        setStatus("success");
+      if (res.ok) {
+        setStatus("Message sent successfully!");
         form.reset();
       } else {
-        setStatus("error");
+        setStatus("Failed to send. Please try again.");
       }
-    } catch (err) {
-      setStatus("error");
+    } catch {
+      setStatus("Failed to send. Please try again.");
     }
     setLoading(false);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="flex gap-4">
-        <div className="flex-1">
-          <label htmlFor="name" className="block mb-1">Name</label>
-          <input type="text" id="name" name="name" required className="w-full px-4 py-2 rounded bg-slate-800 text-white" />
+    <form className="space-y-6" onSubmit={handleSubmit}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-slate-900 dark:text-[#E5E7EB]">
+            Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="John Doe"
+            className="w-full p-3 rounded-lg bg-slate-50 dark:bg-[#1E293B] border-2 border-slate-200 dark:border-[#1F2937] focus:border-[#06B6D4] outline-none transition-all text-slate-900 dark:text-[#E5E7EB] placeholder:text-slate-400 dark:placeholder:text-[#9CA3AF]"
+          />
         </div>
-        <div className="flex-1">
-          <label htmlFor="email" className="block mb-1">Email</label>
-          <input type="email" id="email" name="email" required className="w-full px-4 py-2 rounded bg-slate-800 text-white" />
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-slate-900 dark:text-[#E5E7EB]">
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="john@doe.com"
+            className="w-full p-3 rounded-lg bg-slate-50 dark:bg-[#1E293B] border-2 border-slate-200 dark:border-[#1F2937] focus:border-[#06B6D4] outline-none transition-all text-slate-900 dark:text-[#E5E7EB] placeholder:text-slate-400 dark:placeholder:text-[#9CA3AF]"
+          />
         </div>
       </div>
-      <div>
-        <label htmlFor="message" className="block mb-1">Message</label>
-        <textarea id="message" name="message" required className="w-full px-4 py-2 rounded bg-slate-800 text-white" rows={4}></textarea>
+      <div className="space-y-2">
+        <label className="text-sm font-medium text-slate-900 dark:text-[#E5E7EB]">
+          Message
+        </label>
+        <textarea
+          name="message"
+          required
+          placeholder="Type your message...."
+          className="w-full p-4 rounded-lg bg-slate-50 dark:bg-[#1E293B] border-2 border-slate-200 dark:border-[#1F2937] focus:border-[#06B6D4] outline-none transition-all resize-none min-h-[120px] text-slate-900 dark:text-[#E5E7EB] placeholder:text-slate-400 dark:placeholder:text-[#9CA3AF]"
+        />
       </div>
-      <button type="submit" className="px-6 py-2 bg-cyan-400 text-black rounded hover:bg-cyan-500 flex items-center gap-2" disabled={loading}>
-        {loading ? "Sending..." : <>Send <span aria-label="mail">✉️</span></>}
-      </button>
-      {status === "success" && (
-        <p className="text-green-500 mt-2">Message sent successfully!</p>
-      )}
-      {status === "error" && (
-        <p className="text-red-500 mt-2">Failed to send message. Please try again.</p>
-      )}
+      <div className="flex justify-between items-center">
+        <button
+          type="submit"
+          className="bg-gradient-to-r from-[#06B6D4] to-[#0891B2] text-white px-6 py-2 rounded-lg font-medium flex items-center gap-2 hover:shadow-lg hover:shadow-[#06B6D4]/50 transition-all"
+          disabled={loading}
+        >
+          {loading ? "Sending..." : "Send"}
+          <Icons.email className="h-4 w-4" />
+        </button>
+        {status && (
+          <span className="text-green-600 dark:text-green-400 text-sm font-medium">{status}</span>
+        )}
+      </div>
     </form>
   );
 }
+
+export default ContactFormAjax;

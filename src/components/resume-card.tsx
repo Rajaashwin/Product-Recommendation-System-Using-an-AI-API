@@ -58,7 +58,7 @@ export const ResumeCard = ({
               alt={altText}
               className="object-contain mix-blend-luminosity opacity-80 hover:opacity-100 transition-opacity grayscale-[30%] contrast-110"
             />
-            <AvatarFallback>{altText[0]}</AvatarFallback>
+            <AvatarFallback>{altText ? altText[0] : ""}</AvatarFallback>
           </Avatar>
         </div>
         <div className="flex-grow ml-4 items-center flex-col group">

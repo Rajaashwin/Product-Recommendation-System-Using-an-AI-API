@@ -211,6 +211,50 @@ const DATA = {
       "B.Tech in Electronics and Communication Engineering - SRM Institute",
     ],
   },
+  certifications: [
+    {
+      title: "Applied Machine Learning in Python",
+      institution: "University of Michigan - Coursera",
+      year: "2024",
+      link: "https://www.coursera.org/account/accomplishments/verify/ALFGA9QJT8EV"
+    },
+    {
+      title: "Introduction to Data Science in Python",
+      institution: "University of Michigan - Coursera",
+      year: "2018",
+      link: "https://www.coursera.org/account/accomplishments/verify/BUF4BDPKE66J"
+    },
+    {
+      title: "Python Data Structures",
+      institution: "University of Michigan - Coursera",
+      year: "2023",
+      link: "https://www.coursera.org/account/accomplishments/verify/CRKTXW8UGTT8"
+    },
+    {
+      title: "Programming for Everybody (Getting Started with Python)",
+      institution: "University of Michigan - Coursera",
+      year: "2023",
+      link: "https://www.coursera.org/account/accomplishments/verify/28GBPB2HT34R"
+    },
+    {
+      title: "Microsoft Azure Fundamentals (AZ-900)",
+      institution: "Microsoft",
+      year: "2024",
+      link: "https://learn.microsoft.com/en-us/users/ashwinrajakannan-1579/achievements/j9q8dfet"
+    }
+  ],
+  languages: [
+    {
+      name: "Tamil",
+      proficiency: "Native",
+      icon: "IN"
+    },
+    {
+      name: "English",
+      proficiency: "Fluent",
+      icon: "GB"
+    }
+  ],
 } as const;
 
 export default DATA;

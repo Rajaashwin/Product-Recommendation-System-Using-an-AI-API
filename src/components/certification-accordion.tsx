@@ -83,7 +83,7 @@ export function CertificationAccordion({ cert, idx }: { cert: any; idx: number }
   return (
     <div className="w-full mb-4">
       <button
-        className={`flex items-center w-full px-6 py-4 bg-transparent border border-border rounded-lg shadow-md focus:outline-none transition-all ${open ? "rounded-b-none" : "rounded-b-lg"}`}
+        className={`flex items-center w-full px-6 py-4 bg-transparent border border-slate-200 dark:border-[#06B6D4]/20 rounded-lg shadow-md focus:outline-none transition-all ${open ? "rounded-b-none" : "rounded-b-lg"}`}
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={`cert-panel-${idx}`}
@@ -96,7 +96,7 @@ export function CertificationAccordion({ cert, idx }: { cert: any; idx: number }
       {open && (
         <div
           id={`cert-panel-${idx}`}
-          className="rounded-b-lg bg-transparent border-x border-b border-border shadow-md px-6 pt-2 pb-6"
+          className="rounded-b-lg bg-transparent border-x border-b border-slate-200 dark:border-[#06B6D4]/20 shadow-md px-6 pt-2 pb-6"
         >
           <div className="text-xs text-slate-700 dark:text-[#E5E7EB] mb-2">{cert.institution}</div>
           <div className="text-base font-bold text-slate-700 dark:text-[#E5E7EB] mb-2 mt-2">Skills Gained:</div>

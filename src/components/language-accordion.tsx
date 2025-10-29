@@ -22,7 +22,7 @@ export function LanguageAccordion({ lang, idx }: { lang: any; idx: number }) {
   return (
     <div className="w-full max-w-[700px] mx-auto mb-4">
       <button
-        className={`flex items-center justify-between w-full px-6 py-4 bg-transparent border border-border rounded-lg shadow-md focus:outline-none transition-all ${open ? "rounded-b-none" : "rounded-b-lg"}`}
+        className={`flex items-center justify-between w-full px-6 py-4 bg-transparent border border-slate-200 dark:border-[#06B6D4]/20 rounded-lg shadow-md focus:outline-none transition-all ${open ? "rounded-b-none" : "rounded-b-lg"}`}
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-controls={`lang-panel-${idx}`}
@@ -37,7 +37,7 @@ export function LanguageAccordion({ lang, idx }: { lang: any; idx: number }) {
       {open && (
         <div
           id={`lang-panel-${idx}`}
-          className="rounded-b-lg bg-transparent border-x border-b border-border shadow-md px-6 pt-4 pb-6 text-left"
+          className="rounded-b-lg bg-transparent border-x border-b border-slate-200 dark:border-[#06B6D4]/20 shadow-md px-6 pt-4 pb-6 text-left"
         >
           {/* Progress Bar */}
           <div className="w-full h-2 rounded-full bg-transparent mb-4">

@@ -19,6 +19,7 @@ const DATA = {
   avatarUrl: "/avatar.png",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
   email: "aswinraja98@gmail.com",

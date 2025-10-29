@@ -64,7 +64,7 @@ export const ResumeCard = ({
         <div className="flex-grow ml-4 items-center flex-col group">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm text-slate-900 dark:text-[#E5E7EB]">
                 {title}
                 {badges && (
                   <div className="flex gap-2 mt-2">
@@ -98,25 +98,24 @@ export const ResumeCard = ({
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+              <div className="text-xs sm:text-sm tabular-nums text-slate-700 dark:text-[#E5E7EB] text-right">
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {subtitle && <div className="font-sans text-xs text-slate-700 dark:text-[#E5E7EB]">{subtitle}</div>}
           </CardHeader>
           {description && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{
                 opacity: isExpanded ? 1 : 0,
-
                 height: isExpanded ? "auto" : 0,
               }}
               transition={{
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 text-xs sm:text-sm"
+              className="mt-2 text-xs sm:text-sm text-slate-700 dark:text-[#E5E7EB]"
             >
               {description}
             </motion.div>

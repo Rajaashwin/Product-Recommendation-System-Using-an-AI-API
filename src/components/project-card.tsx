@@ -125,11 +125,11 @@ export function ProjectCard({
       {/* Header Section */}
       <CardHeader className="px-4 pb-2">
         <div className="space-y-1">
-          <CardTitle className="text-base font-semibold">
+          <CardTitle className="text-base font-semibold text-slate-900 dark:text-[#E5E7EB]">
             {title}
           </CardTitle>
           {dates && (
-            <time className="font-sans text-xs text-muted-foreground">
+            <time className="font-sans text-xs text-slate-700 dark:text-[#E5E7EB]">
               {dates}
             </time>
           )}
@@ -138,7 +138,7 @@ export function ProjectCard({
 
       {/* Content Section */}
       <CardContent className="px-4 pb-2 flex-grow">
-        <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+        <Markdown className="prose max-w-full text-pretty font-sans text-sm text-slate-700 dark:text-[#E5E7EB] dark:prose-invert">
           {description}
         </Markdown>
         

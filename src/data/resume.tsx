@@ -188,6 +188,32 @@ const DATA = {
       ],
     },
     {
+      title: "Vizzy Chat - AI Creative Assistant",
+      description: "Dual-mode AI chat & image generation platform powered by OpenRouter (text) and HuggingFace (images). Features session-based conversation history, intelligent fallbacks with SVG placeholders, and production-ready deployment on Railway + GitHub Pages.",
+      technologies: ["React", "Vite", "FastAPI", "Python", "OpenRouter", "HuggingFace", "Railway", "GitHub Pages"],
+      href: "https://rajaashwin.github.io/Vizzy-Chat-Image-Generator",
+      dates: "2026",
+      image: "https://images.unsplash.com/photo-1677442d019cecf76da954563ec1ba787da729541?w=800&auto=format&fit=crop&q=60",
+      video: "",
+      links: [
+        {
+          title: "Live Demo",
+          href: "https://rajaashwin.github.io/Vizzy-Chat-Image-Generator",
+          icon: "Globe"
+        },
+        {
+          title: "Source",
+          href: "https://github.com/Rajaashwin/Vizzy-Chat-Image-Generator",
+          icon: "Github"
+        },
+        {
+          title: "Backend API",
+          href: "https://web-production-d4489.up.railway.app",
+          icon: "Globe"
+        }
+      ],
+    },
+    {
       title: "Identification of Circulating Tumor DNA (ctDNA) Using Machine Learning",
       description: "Used CNNs for ctDNA detection and SVM for DNA classification. Applied spectrogram imaging, digital mapping (Keras), Canny edge detection, and scikit-learn for analysis.",
       technologies: ["CNN", "SVM", "Keras", "scikit-learn", "Python", "OpenCV"],

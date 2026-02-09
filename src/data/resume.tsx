@@ -189,16 +189,16 @@ const DATA = {
     },
     {
       title: "Vizzy Chat - AI Creative Assistant",
-      description: "Dual-mode AI chat & image generation platform powered by OpenRouter (text) and HuggingFace (images). Features session-based conversation history, intelligent fallbacks with SVG placeholders, and production-ready deployment on Railway + GitHub Pages.",
-      technologies: ["React", "Vite", "FastAPI", "Python", "OpenRouter", "HuggingFace", "Railway", "GitHub Pages"],
-      href: "https://rajaashwin.github.io/Vizzy-Chat-Image-Generator",
+      description: "Dual-mode AI chat & image generation platform powered by OpenRouter (text) and HuggingFace (images). Features session-based conversation history, intelligent fallbacks with SVG placeholders, and production-ready deployment on Railway. Now rebuilt as a Next.js showcase project with professional designs.",
+      technologies: ["Next.js", "React", "FastAPI", "Python", "OpenRouter", "HuggingFace", "Railway", "Tailwind CSS", "shadcn/UI"],
+      href: "/projects/vizzy-chat",
       dates: "2026",
       image: "https://images.unsplash.com/photo-1677442d019cecf76da954563ec1ba787da729541?w=800&auto=format&fit=crop&q=60",
       video: "",
       links: [
         {
           title: "Live Demo",
-          href: "https://rajaashwin.github.io/Vizzy-Chat-Image-Generator",
+          href: "/projects/vizzy-chat",
           icon: "Globe"
         },
         {
